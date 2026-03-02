@@ -696,81 +696,79 @@
             </div>
         </div>
         <div class="text-center ">
-            <p class=" text-body-secondary  text-decoration-none fontF text-black-50 m-2  float-sm-start">&copy;2022
-            <div id="site-footer"></div>
+            <p class="text-body-secondary text-decoration-none fontF text-black-50 m-2 float-sm-start">
+                &copy;2022 StepZero. All rights reserved.
+            </p>
+        </div>
 
+        <!-- shared footer -->
+        <div id="site-footer"></div>
 
-            <!-- <section> <section> <section> <section> <section> -->
+        <!-- scripts -->
+        <script src="./node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+        <script src="./node_modules/@popperjs/core/dist/umd/popper.js"></script>
 
+        <!-- Swiper JS -->
+        <script src="./node_modules/swiper/swiper-bundle.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
 
-            <!-- <section> <section> <section> <section> <section> -->
-
-            <script src="./node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
-            <script src="./node_modules/@popperjs/core/dist/umd/popper.js"></script>
-
-
-            <!-- Swiper JS -->
-            <script src="./node_modules/swiper/swiper-bundle.min.js"></script>
-            <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
-
-            <!-- Initialize Swiper -->
-            <script>
-
-                var swiper = new Swiper(".mySwiper", {
-                    direction: "horizontal",
-                    slidesPerView: 1,
-                    spaceBetween: 10,
-                    grabCursor: true,
-                    navigation: {
-                        nextEl: ".swiper-button-next",
-                        prevEl: ".swiper-button-prev",
+        <!-- Initialize Swiper -->
+        <script>
+            var swiper = new Swiper(".mySwiper", {
+                direction: "horizontal",
+                slidesPerView: 1,
+                spaceBetween: 10,
+                grabCursor: true,
+                navigation: {
+                    nextEl: ".swiper-button-next",
+                    prevEl: ".swiper-button-prev",
+                },
+                pagination: {
+                    el: ".swiper-pagination",
+                    clickable: true,
+                },
+                breakpoints: {
+                    640: {
+                        slidesPerView: 2,
+                        spaceBetween: 20,
                     },
-                    pagination: {
-                        el: ".swiper-pagination",
-                        clickable: true,
+                    768: {
+                        slidesPerView: 3.5,
+                        spaceBetween: 40,
                     },
-                    breakpoints: {
-                        640: {
-                            slidesPerView: 2,
-                            spaceBetween: 20,
-                        },
-                        768: {
-                            slidesPerView: 3.5,
-                            spaceBetween: 40,
-                        },
-                        1024: {
-                            slidesPerView: 3.5,
-                            spaceBetween: 50,
-                        },
+                    1024: {
+                        slidesPerView: 3.5,
+                        spaceBetween: 50,
                     },
-                    zoom: true,
-                    loop: true,
-                });
-            </script>
+                },
+                zoom: true,
+                loop: true,
+            });
+        </script>
 
-            <script>
-                var swiper = new Swiper(".mySwiper1", {
-                    direction: "vertical",
-                    loop: true,
-                    spaceBetween: 3.5,
-                    slidesPerView: 3.5,
-                    freeMode: true,
-                    watchSlidesProgress: true,
-                });
-                var swiper2 = new Swiper(".mySwiper2", {
-                    loop: true,
-                    spaceBetween: 10,
-                    navigation: {
-                        nextEl: ".swiper-button-next",
-                        prevEl: ".swiper-button-prev",
-                    },
-                    thumbs: {
-                        swiper: swiper,
-                    },
+        <script>
+            var swiper = new Swiper(".mySwiper1", {
+                direction: "vertical",
+                loop: true,
+                spaceBetween: 3.5,
+                slidesPerView: 3.5,
+                freeMode: true,
+                watchSlidesProgress: true,
+            });
+            var swiper2 = new Swiper(".mySwiper2", {
+                loop: true,
+                spaceBetween: 10,
+                navigation: {
+                    nextEl: ".swiper-button-next",
+                    prevEl: ".swiper-button-prev",
+                },
+                thumbs: {
+                    swiper: swiper,
+                },
+            });
+        </script>
 
-                });
-            </script>
-            <script src="./script.js"></script>
+        <script src="./script.js"></script>
 </body>
 
 </html>
