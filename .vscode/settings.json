@@ -6,5 +6,5 @@
         "Swiper"
     ],
     "liveServer.settings.port": 5501,
-    "livePreview.defaultPreviewPath": "/home.html"
+    "livePreview.defaultPreviewPath": "/index.html"
 }

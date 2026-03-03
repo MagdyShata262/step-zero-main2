@@ -1,7 +1,7 @@
 const CACHE_NAME = "stepzero-cache-v1";
 const urlsToCache = [
     "/",
-    "/home.html",
+    "/index.html",
     "/services.html",
     "/ourworks.html",
     "/ourworks1.html",

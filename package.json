@@ -4,7 +4,7 @@
     "description": "Static multi-page Bootstrap website",
     "scripts": {
         "start": "serve . -l 3000",
-        "dev": "live-server --open=home.html --watch=.",
+        "dev": "live-server --open=index.html --watch=.",
         "build:css": "npx postcss style.css -o dist/style.min.css --env production",
         "build:js": "npx terser script.js -o dist/script.min.js --compress --mangle",
         "build": "npm run build:css && npm run build:js"
