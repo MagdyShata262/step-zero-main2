@@ -642,11 +642,12 @@ html {
 }
 
 .service-card img {
-    width: 100%;
-    height: 100%;
+    width: 50%;
+    height: 80%;
     object-fit: cover;
-    /* ملء المساحة دون تشويه الصورة */
-    transition: transform 0.5s ease;
+    margin: 20px;
+    align-items: center;
+    justify-content: center
 }
 
 .service-card:hover img {
