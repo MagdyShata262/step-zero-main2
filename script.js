@@ -14,38 +14,38 @@ setInterval(myTimeout6, 12000);
 setInterval(myTimeout7, 140000);
 
 function myTimeout1() {
-    document.getElementById('demo').innerHTML = 'للنجاح';
+    document.getElementById("demo").innerHTML = "للنجاح";
 }
 function myTimeout2() {
-    document.getElementById('demo').innerHTML = 'التميز';
+    document.getElementById("demo").innerHTML = "التميز";
 }
 function myTimeout3() {
-    document.getElementById('demo').innerHTML = 'الابتكار';
+    document.getElementById("demo").innerHTML = "الابتكار";
 }
 
 function myTimeout4() {
-    document.getElementById('demo').innerHTML = 'التطور';
+    document.getElementById("demo").innerHTML = "التطور";
 }
 function myTimeout5() {
-    document.getElementById('demo').innerHTML = 'قمة';
+    document.getElementById("demo").innerHTML = "قمة";
 }
 function myTimeout6() {
-    document.getElementById('demo').innerHTML = 'اصرار';
+    document.getElementById("demo").innerHTML = "اصرار";
 }
 
 function myTimeout7() {
-    document.getElementById('demo').innerHTML = 'نمو';
+    document.getElementById("demo").innerHTML = "نمو";
 }
 
-window.addEventListener('DOMContentLoaded', () => {
-    const boxes = document.querySelectorAll('.border-box');
+window.addEventListener("DOMContentLoaded", () => {
+    const boxes = document.querySelectorAll(".border-box");
 
     function animateBoxes() {
         boxes.forEach((box, index) => {
             setTimeout(() => {
-                box.style.borderColor = 'red';
+                box.style.borderColor = "red";
                 setTimeout(() => {
-                    box.style.borderColor = 'gray';
+                    box.style.borderColor = "gray";
                 }, 1000);
             }, index * 1000);
         });
@@ -58,7 +58,7 @@ window.addEventListener('DOMContentLoaded', () => {
 
     function resetBoxes() {
         boxes.forEach((box) => {
-            box.style.borderColor = 'gray';
+            box.style.borderColor = "gray";
         });
     }
 
@@ -73,10 +73,20 @@ function loadHTML(id, url) {
             const el = document.getElementById(id);
             if (el) el.innerHTML = html;
         })
-        .catch((err) => console.error('Failed to load ' + url, err));
+        .catch((err) => console.error("Failed to load " + url, err));
 }
 
-document.addEventListener('DOMContentLoaded', () => {
-    loadHTML('site-header', 'partials/header.html');
-    loadHTML('site-footer', 'partials/footer.html');
+document.addEventListener("DOMContentLoaded", () => {
+    loadHTML("site-header", "partials/header.html");
+    loadHTML("site-footer", "partials/footer.html");
 });
+
+// register service worker for offline caching
+if ("serviceWorker" in navigator) {
+    window.addEventListener("load", () => {
+        navigator.serviceWorker
+            .register("/sw.js")
+            .then((reg) => console.log("SW registered", reg))
+            .catch((err) => console.error("SW registration failed", err));
+    });
+}
