@@ -628,26 +628,25 @@ html {
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
 }
 
-.service-card:hover {
-    transform: translateY(-10px);
-    /* رفع البطاقة للأعلى */
-    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
-}
-
 .service-img-wrapper {
     position: relative;
     overflow: hidden;
-    height: 200px;
-    /* ارتفاع ثابت للصورة */
+    aspect-ratio: 3 / 2;
+    /* or whatever ratio you prefer */
+    width: 100%;
 }
 
-.service-card img {
-    width: 50%;
-    height: 80%;
-    object-fit: cover;
-    margin: 20px;
+.service-img-wrapper img {
+    width: 200px;
+    height: 200px;
+    max-width: 100%;
+    max-height: 100%;
+    margin: 20px auto;
+    padding: 20px;
     align-items: center;
-    justify-content: center
+    display: flex;
+    justify-content: center;
+    object-fit: cover;
 }
 
 .service-card:hover img {
@@ -672,18 +671,47 @@ html {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-.card-body {
-    text-align: center;
-    padding: 2rem 1.5rem;
+.service-card {
+    display: flex;
+    flex-direction: column;
 }
 
-.card-title {
-    font-weight: 700;
-    margin-bottom: 1rem;
+.service-card .card-body {
+    flex: 1 0 auto;
 }
 
-.btn-service {
-    border-radius: 50px;
-    padding: 8px 25px;
+.service-card .btn-service {
+    margin-top: auto;
+}
+
+/* بطاقات أعمالنا */
+.portfolio-card {
+    position: relative;
+    border: none;
+    border-radius: 15px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    aspect-ratio: 4 / 3;
+    /* يحافظ على ارتفاع متناسق */
+}
+
+.portfolio-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.portfolio-card .card-img-overlay {
+    background: rgba(0, 0, 0, 0.4);
+}
+
+.portfolio-card .card-title {
+    color: #fff;
+    font-size: 1.25rem;
     font-weight: 600;
+}
+
+.portfolio-card:hover {
+    transform: translateY(-5px);
 }
